@@ -43,13 +43,19 @@ h1 {
 }
 
 h2 {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+h3 {
     font-family: 'Lato', sans-serif;
     font-size: 32px;
     font-weight: 600;
     text-align: center;
 }
 
-h3 {
+h4 {
     font-family: 'Open Sans', sans-serif;
     font-size: 32px;
     font-weight: 700;
@@ -175,11 +181,15 @@ button {
 
 .planned-planthood .planned-planthood-bottom-border {
     width: 35%;
-    margin: 6rem auto 2rem;
+    margin: 6rem auto 0;
     border: 2px solid var(--green);
 }
 
 /* planerade plantations section  */
+.planned-plantations {
+    padding: 2rem 0;
+}
+
 .planned-plantations .cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(294px, 1fr));
@@ -201,22 +211,22 @@ button {
     padding: 3rem;
 }
 
-#card-1 .card-img-container{
+.planned-plantations #card-1 .card-img-container{
         background-image: url('https://images.unsplash.com/photo-1518568403628-df55701ade9e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 }
-#card-2 .card-img-container{
+.planned-plantations #card-2 .card-img-container{
         background-image: url('https://images.unsplash.com/photo-1596199050105-6d5d32222916?q=80&w=2639&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 }
-#card-3 .card-img-container{
+.planned-plantations #card-3 .card-img-container{
         background-image: url('https://images.unsplash.com/photo-1565698228480-eec300c9679b?q=80&w=2806&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 }
-#card-4 .card-img-container{
+.planned-plantations #card-4 .card-img-container{
         background-image: url('https://images.unsplash.com/photo-1687878269804-63e8b50e3ddc?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 }
-#card-5 .card-img-container{
+.planned-plantations #card-5 .card-img-container{
         background-image: url('https://images.unsplash.com/photo-1555447740-03e40562af94?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 }
-#card-6 .card-img-container{
+.planned-plantations #card-6 .card-img-container{
         background-image: url('https://images.unsplash.com/photo-1627989230968-d0b8e2d1a398?q=80&w=2962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 }
 
@@ -274,7 +284,6 @@ button {
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
-    margin: 2rem 0;
 }
 
 .previous-plantations .previous-plantations-content {
@@ -381,4 +390,90 @@ footer .to-up a {
 }
 
 
+/* My pages  */
+/* My pages header  */
+.myPages-header {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem;
+    background-image: url('https://images.unsplash.com/photo-1586281010691-f9da4be5b1f7?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
+.myPages-header h2{
+    color: var(--white);
+}
+
+
+/* Add palantation section  */
+.add-plantation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+}
+
+.add-plantation .add-plantation-title {
+    align-self: flex-start;
+    font-weight: 400;
+    color: #060606;
+}
+
+.add-plantation .add-plantation-form{
+    width: 100%;
+}
+
+.add-plantation .form-groups {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+    gap: 2.5rem;
+}
+
+.add-plantation .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-plantation label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #060606;
+}
+
+.add-plantation input {
+    border: none;
+    outline: none;
+    box-shadow: 0px 4px 4px 0px #00000025;
+    padding: 1rem;
+}
+
+.add-plantation .add-btn {
+    display: block;
+    margin: 0 auto 4rem;
+}
+
+
+
+/* your planned plantations  */
+.planned-plantations #your-plantations-card-1 .card-img-container{
+        background-image: url('https://images.unsplash.com/photo-1518568403628-df55701ade9e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+
+/* your planted plantations  */
+.planned-plantations #your-planted-plantations-card-1 .card-img-container{
+        background-image: url('https://images.unsplash.com/photo-1518568403628-df55701ade9e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+.planned-plantations #your-planted-plantations-card-2 .card-img-container{
+        background-image: url('https://images.unsplash.com/photo-1518568403628-df55701ade9e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
