@@ -378,7 +378,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
 }
 
 footer .to-up a {
@@ -455,6 +455,7 @@ footer .to-up a {
     outline: none;
     box-shadow: 0px 4px 4px 0px #00000025;
     padding: 1rem;
+    border-radius: 4px;
 }
 
 .add-plantation .add-btn {
@@ -477,3 +478,18 @@ footer .to-up a {
 .planned-plantations #your-planted-plantations-card-2 .card-img-container{
         background-image: url('https://images.unsplash.com/photo-1518568403628-df55701ade9e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 }
+
+
+/* Images group  */
+.images-group {
+    background-color: var(--brown);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.images-group img {
+    width: 100%;
+}
+
