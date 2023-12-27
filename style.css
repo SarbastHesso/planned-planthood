@@ -97,7 +97,7 @@ button {
 .hero {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    min-height: 540px;
+    /* min-height: 540px; */
 }
 
 .hero .logo-container {
@@ -120,6 +120,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 
 .hero .dig {
@@ -127,12 +128,29 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
+}
+
+.hero .logo-container img, .hero .seeding img, .hero .dig img {
+    max-width: 100%;
 }
 
 
 /* Nav  */
 .nav {
     box-shadow: 0px 4px 4px 0px #03382F1C;
+}
+
+.nav .image-container {
+    padding: 1rem;
+    display: none;
+    justify-content: end;
+}
+
+.nav .image-container img {
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
 }
 
 .navbar {
@@ -152,21 +170,24 @@ button {
 }
 
 .planned-planthood .planned-planthood-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    justify-content: center;
     gap: 4rem;
     margin: 3rem 0;
 }
 
 .planned-planthood .planned-planthood-img-container {
-    width: 377px;
-    height: 377px;
+    max-width: 377px;
+    max-height: 377px;
     background-color: var(--green);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10%;
+    padding: 20%;
+    margin: 0 auto;
 }
 
 .planned-planthood .planned-planthood-main-text {
@@ -180,7 +201,7 @@ button {
 }
 
 .planned-planthood .planned-planthood-bottom-border {
-    width: 35%;
+    max-width: 303px;
     margin: 6rem auto 0;
     border: 2px solid var(--green);
 }
@@ -191,8 +212,10 @@ button {
 }
 
 .planned-plantations .cards {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(294px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(175px, 270px));
+    align-items: center;
     padding: 3rem 2rem;
     gap: 2.5rem 1.5rem;
 }
@@ -208,7 +231,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3rem;
+    padding: 2rem 3rem;
 }
 
 .planned-plantations #card-1 .card-img-container{
@@ -270,6 +293,13 @@ button {
     padding: 6px 15px;
 }
 
+.planned-plantations .card-delete-icon {
+    width: 18px;
+    height: 20px;
+    cursor: pointer;
+    display: none;
+}
+
 .planned-plantations-btn {
     display: block;
     margin: 1rem auto;
@@ -280,18 +310,15 @@ button {
 /* previous-plantations section  */
 .previous-plantations {
     padding: 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 4rem;
 }
 
 .previous-plantations .previous-plantations-content {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    justify-content: center;
     gap: 4rem;
-    margin-bottom: 2rem;
+    margin: 3rem 0;
 }
 
 .previous-plantations .previous-plantations-main-text {
@@ -303,14 +330,15 @@ button {
 }
 
 .previous-plantations .previous-plantations-img-container {
-    width: 377px;
-    height: 377px;
+    max-width: 377px;
+    max-height: 377px;
     background-color: var(--green);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10%;
+    padding: 20% 25%;
+    margin: 0 auto;
 }
 
 
@@ -397,7 +425,7 @@ footer .to-up a {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 3rem;
+    padding: 2rem;
     background-image: url('https://images.unsplash.com/photo-1586281010691-f9da4be5b1f7?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-repeat: no-repeat;
     background-size: cover;
@@ -484,12 +512,327 @@ footer .to-up a {
 .images-group {
     background-color: var(--brown);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
     gap: 1rem;
     padding: 2rem;
 }
 
-.images-group img {
-    width: 100%;
+.images-group #image-1 {
+    background-image: url('./assets/images-group/image-1.svg');
+}
+.images-group #image-2 {
+    background-image: url('./assets/images-group/image-2.svg');
+}
+.images-group #image-3 {
+    background-image: url('./assets/images-group/image-3.svg');
+}
+.images-group #image-4 {
+    background-image: url('./assets/images-group/image-4.svg');
 }
 
+.images-group .image-container {
+    height: 277px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+    h1{
+        font-size: 36px;
+    }
+    h3{
+        font-size: 24px;
+    }
+    h4{
+        font-size: 24px;
+    }
+
+    .section-btn {
+        padding: 1rem 1.5rem;
+        font-size: 16px;
+    }
+
+    .planned-planthood .planned-planthood-main-btn {
+        padding: 1rem 1.5rem;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: 450px 250px;
+    }
+
+    .hero .hero-right {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero .seeding, .hero .dig {
+        padding: 1.5rem;
+    }
+
+    .hero .hero-right img {
+        max-width: 50%;
+    }
+    
+    .nav {
+        box-shadow: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .nav .image-container {
+        display: flex;
+    }
+
+    .nav .navbar {
+        display: none;
+    }
+
+    .planned-planthood .planned-planthood-content, 
+    .previous-plantations .previous-plantations-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .planned-planthood .planned-planthood-main, 
+    .previous-plantations .previous-plantations-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .planned-planthood .planned-planthood-img-container,
+    .previous-plantations .previous-plantations-main {
+        order: 1;
+    }
+
+    .planned-planthood .planned-planthood-img-container img,
+    .previous-plantations .previous-plantations-img-container img{
+        max-width: 100%;
+    }
+
+    .planned-planthood .planned-planthood-img-container{
+        max-width: 80%;
+        padding: 10%;
+    }
+
+    .previous-plantations .previous-plantations-img-container{
+        max-width: 80%;
+        padding: 10% 14%;
+    }
+
+    .planned-planthood .planned-planthood-bottom-border {
+        max-width: 270px;
+        margin: 2.5rem auto 0;
+    }
+
+    .planned-plantations {
+        padding: 0;
+    }
+
+    .planned-plantations-title {
+        margin-bottom: 1rem;
+    }
+
+    .card img {
+        max-width: 100%;
+    }
+
+    .planned-plantations .card-middle, 
+    .planned-plantations .card-bottom{
+        padding: .5rem;
+    }
+
+    .planned-plantations .card-title {
+        font-size: 20px;
+    }
+
+    .planned-plantations .card-date, .planned-plantations .card-name {
+        font-size: 14px;
+    }
+
+    .planned-plantations .card-btn {
+        display: none;
+    }
+
+    .planned-plantations .card-delete-icon {
+        display: block;
+    }
+
+    .contact {
+        min-height: 800px;
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        order: 1;
+    }
+
+    .contact .contact-text {
+        font-size: 48px;
+    }
+
+    .contact .tel, .contact .email{
+        font-size: 16px;
+    }
+
+    .contact .contact-item span {
+        font-size: 24px;
+    }
+
+    footer {
+        margin-bottom: 0;
+    }
+
+    footer .to-up a {
+        font-size: 16px;
+    }
+
+    .add-plantation .form-groups {
+        display: block;
+    }
+
+    .add-plantation .form-group {
+        margin: 1rem 0;
+    }
+
+    .add-plantation .add-plantation-title {
+        align-self: center;
+    }
+
+    .add-plantation label {
+        font-size: 16px;
+    }
+
+    .images-group {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 200px);
+        gap: .5rem;
+        padding: .7rem;
+    }
+
+    .images-group .image-container {
+        height: auto;
+    }
+
+    .add-plantation {
+        padding: 1rem;
+    }
+
+    .planned-plantations {
+        margin-bottom: 2rem;
+    }
+
+
+}
+
+@media screen and (max-width: 576px) {
+    h1{
+        font-size: 24px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    h4{
+        font-size: 16px;
+    }
+    p {
+        font-size: 14px;
+    }
+
+    .section-btn {
+        padding: .5rem 1rem;
+        font-size: 16px;
+    }
+
+    .planned-planthood .planned-planthood-main-btn {
+        padding: .5rem 1.2rem;
+    }
+
+    .hero {
+        grid-template-rows: 390px 195px;
+    }
+
+    .hero .hero-right {
+        grid-template-rows: 195px;
+    }
+
+    .hero .seeding, .hero .dig {
+        padding: 0;
+    }
+
+    .planned-planthood .planned-planthood-img-container{
+        max-width: 80%;
+        padding: 18%;
+    }
+
+    .previous-plantations .previous-plantations-img-container{
+        max-width: 80%;
+        padding: 18% 24%;
+    }
+
+    .planned-planthood .planned-planthood-bottom-border {
+        max-width: 202px;
+    }
+
+    .planned-plantations .cards {
+        gap: .7rem;
+        padding: .7rem;
+        grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    }
+
+    .planned-plantations .card-title {
+        font-size: 14px;
+    }
+
+    .planned-plantations .card-date, .planned-plantations .card-name {
+        font-size: 10px;
+    }
+
+    .planned-plantations .card-delete-icon {
+        width: 14px;
+        height: 16px;
+    }
+
+    .contact .contact-text {
+        font-size: 32px;
+    }
+
+    .contact .tel, .contact .email{
+        font-size: 12px;
+    }
+
+    .contact .contact-item span {
+        font-size: 20px;
+    }
+
+    footer .to-up a {
+        font-size: 12px;
+    }
+
+    .add-plantation .add-plantation-title{
+        font-size: 24px;
+    }
+
+    .images-group {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 110px);
+    }
+
+    .add-plantation label {
+        font-size: 12px;
+    }
+}
